@@ -8,7 +8,7 @@
     "clean": "rimraf dist",
     "build": "yarn clean && rollup -c",
     "watch": "yarn clean && rollup -cw",
-    "postinstall": "tsc --outDir ./build"
+    "postinstall": "cd ./node_modules/@havard024/rrweb2 && npm install && npm run build"
   },
   "files": [
     "dist"
