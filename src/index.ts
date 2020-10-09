@@ -49,6 +49,7 @@ export default class SentryRRWeb {
       maskAllInputs: this.maskAllInputs,
       emit(event: RRWebEvent, isCheckout?: boolean) {
         const self = Sentry.getCurrentHub().getIntegration(SentryRRWeb);
+        if (!self) return;
         if (isCheckout) {
           self.events = [event];
         } else {
